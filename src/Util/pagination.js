@@ -14,9 +14,8 @@ const Pagination = (props)=> {
 
         renderPageNumbers = pageNumbers.map(number => {
             let classes = currentPage === number ? styles.active : '';
-
             return (
-                <span key={number} className={classes} onClick={() => callApi(number)}>{number}</span>
+                <span key={number} className = {classes} onClick={() => callApi(number)}>{number}</span>
             );
         })
 

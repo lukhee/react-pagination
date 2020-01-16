@@ -36,10 +36,7 @@ class App extends Component {
         current_page: data.page
         });
     }
-
-    callMe(){
-        console.log("me")
-    }
+    
     render() {
         let users, renderPageNumbers;
 
@@ -70,26 +67,21 @@ class App extends Component {
         }
 
         return (
-
-
-        <div className={styles.app}>
-
-            <table className={styles.table}>
-            <thead>
-                <tr>
-                <th>S/N</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                {users}
-            </tbody>
-            </table>
-            
-            <Pagination total={this.state.total} perPage = {this.state.per_page} currentPage={this.state.current_page} callApi={ this.makeHttpRequestWithPage }/>
-
-        </div>
+            <div className={styles.app}>
+                <table className={styles.table}>
+                <thead>
+                    <tr>
+                    <th>S/N</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {users}
+                </tbody>
+                </table>
+                <Pagination total={this.state.total} perPage = {this.state.per_page} currentPage={this.state.current_page} callApi={ this.makeHttpRequestWithPage }/>
+            </div>
         );
     }
 
